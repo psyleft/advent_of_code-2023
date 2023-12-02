@@ -3,6 +3,9 @@
  (ice-9 textual-ports)
 )
 
+;; Right now this only replaces the first letter of number words
+;; e.g. eightwo -> 8igh2wo
+;; This works for the solution but isn't necessarily ideal
 (define (process-string str)
   (define (modify-prefix str)
     (fold
